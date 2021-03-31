@@ -33,19 +33,19 @@ namespace GraphChocolate.Data
                     new Pizza
                     {
                         Id = 1,
-                        Title = "First Pizza",
+                        Name = "First Pizza",
                         ToppingId = 1
                     },
                     new Pizza
                     {
                         Id = 2,
-                        Title = "Second Pizza",
+                        Name = "Second Pizza",
                         ToppingId = 1
                     },
                     new Pizza
                     {
                         Id = 3,
-                        Title = "Third Pizza",
+                        Name = "Third Pizza",
                         ToppingId = 2,
                     }
                 );

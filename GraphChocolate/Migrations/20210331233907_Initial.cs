@@ -26,7 +26,7 @@ namespace GraphChocolate.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ToppingId = table.Column<int>(type: "int", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,17 +51,17 @@ namespace GraphChocolate.Migrations
 
             migrationBuilder.InsertData(
                 table: "Pizzas",
-                columns: new[] { "Id", "Title", "ToppingId" },
+                columns: new[] { "Id", "Name", "ToppingId" },
                 values: new object[] { 1, "First Pizza", 1 });
 
             migrationBuilder.InsertData(
                 table: "Pizzas",
-                columns: new[] { "Id", "Title", "ToppingId" },
+                columns: new[] { "Id", "Name", "ToppingId" },
                 values: new object[] { 2, "Second Pizza", 1 });
 
             migrationBuilder.InsertData(
                 table: "Pizzas",
-                columns: new[] { "Id", "Title", "ToppingId" },
+                columns: new[] { "Id", "Name", "ToppingId" },
                 values: new object[] { 3, "Third Pizza", 2 });
 
             migrationBuilder.CreateIndex(

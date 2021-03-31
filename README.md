@@ -31,20 +31,20 @@ https://localhost:5001/graphql/
 
 ```
 {
-  books
+  pizzas
   {
-    title
+    name
   }  
 }
 ```
 
 ```
 {
-  books(where: { author: { name: { contains: "First Author"} } })
+  pizzas(where: { topping: { name: { contains: "First Topping"} } })
   {
     id
-    title
-    author
+    name
+    topping
     {
       name
     }

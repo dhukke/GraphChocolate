@@ -25,7 +25,7 @@ namespace GraphChocolate.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Title")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -42,19 +42,19 @@ namespace GraphChocolate.Migrations
                         new
                         {
                             Id = 1,
-                            Title = "First Pizza",
+                            Name = "First Pizza",
                             ToppingId = 1
                         },
                         new
                         {
                             Id = 2,
-                            Title = "Second Pizza",
+                            Name = "Second Pizza",
                             ToppingId = 1
                         },
                         new
                         {
                             Id = 3,
-                            Title = "Third Pizza",
+                            Name = "Third Pizza",
                             ToppingId = 2
                         });
                 });

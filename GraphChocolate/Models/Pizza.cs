@@ -13,7 +13,7 @@ namespace GraphChocolate.Models
         public int ToppingId { get; set; }
 
         [Required]
-        public string? Title { get; set; }
+        public string? Name { get; set; }
 
         public virtual Topping? Topping { get; set; }
     }
