@@ -1,13 +1,12 @@
-﻿## ValidationPipeline with FluentResults
-https://github.com/altmann/FluentResults/issues/54
+﻿## GraphQL w/ HotChocolate
+
+Playing around with graphQL/HotChocolate querying over EF Context.
 
 ## Docker
 
 ### SQL Server
 
-`
-docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server
-`
+`docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server`
 
 ## Database
 
@@ -34,7 +33,7 @@ https://localhost:5001/graphql/
   pizzas
   {
     name
-  }  
+  }
 }
 ```
 
@@ -48,6 +47,6 @@ https://localhost:5001/graphql/
     {
       name
     }
-  }  
+  }
 }
 ```
