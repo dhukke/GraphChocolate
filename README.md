@@ -10,17 +10,23 @@ Playing around with graphQL/HotChocolate querying over EF Context.
 
 ## Database
 
+If ef is not installed globally run:
+
+```
+dotnet tool install --global dotnet-ef
 ```
 
-dotnet tool install --global dotnet-ef
+To update db run:
+
+```
 
 cd GraphChocolate
-
-dotnet ef migrations add InitialCreate
 
 dotnet ef database update
 
 ```
+
+I used the "dotnet ef migrations add Initial" command to create the migration.
 
 ## Endpoint
 
