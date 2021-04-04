@@ -1,3 +1,4 @@
+using System;
 using GraphChocolate.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +15,26 @@ namespace GraphChocolate
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // CORS
+            var cors = Environment.GetEnvironmentVariable("CORS");
+            var origins = cors?.Split(',', StringSplitOptions.RemoveEmptyEntries);
+
+            if (origins == null || origins.Length == 0)
+            {
+                origins = new string[] { "http://localhost", "http://localhost:8080" };
+            }
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins(origins)
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+
             services
                 .AddPooledDbContextFactory<PizzaContext>(
                     (s, o) => o
@@ -37,6 +58,8 @@ namespace GraphChocolate
             }
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {
